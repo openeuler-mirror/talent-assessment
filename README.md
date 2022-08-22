@@ -15,9 +15,14 @@ The repository of openEuler talent assessment
 
 #### 使用说明
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+1.  执行如下代码进行构建
+sh build.sh openeuler-20.03-lts-sp3-talent 1.1
+
+2.  导入编译好的docker镜像
+docker load -i build_reuslt/talent-assessment-image.tar
+
+3.  启动容器实例
+docker run -tid --name talent -p 8888:80 openeuler-20.03-lts-sp3-talent:1.1
 
 #### 参与贡献
 
