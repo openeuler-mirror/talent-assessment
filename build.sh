@@ -31,10 +31,10 @@ main()
 {
     
     # 检查编译环境是否已经安装了docker-engine
-    check_docker_service
+    #check_docker_service
     
     # 下载docker基础镜像
-    download_docker_img
+    #download_docker_img
     
     # 编译src文件
     build_src
@@ -46,7 +46,7 @@ main()
     check_pkgs "${PWD}" "${docker_file}"
     
     # 导入基础镜像
-    import_docker_img
+    #import_docker_img
     
     # 构建人才认定镜像
     build_talent_img
