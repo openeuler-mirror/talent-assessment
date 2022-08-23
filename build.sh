@@ -6,7 +6,7 @@
 #Return: NULL
 #Author: gangliucr@isoftstone.com
 #Version: 1.1
-#Company: 软通动力
+#Company: 西安软通动力网络技术有限公司
 #Date: 2022/7/28
 #Des: 本示例针对openEuler 20.03 LTS SP3的容器镜像
 ###############################################################################
@@ -27,26 +27,26 @@ docker_file="Dockerfile"
 talent_image="talent-assessment-image"
 
 
-main()
+function main()
 {
     
     # 检查编译环境是否已经安装了docker-engine
-    check_docker_service
+    #check_docker_service
     
     # 下载docker基础镜像
-    download_docker_img
+    #download_docker_img
     
     # 编译src文件
-    build_src
+    #build_src
     
     # 检查文件
-    echo "3. Checking all files."
-    check_pkgs "${PWD}" "${nginx_conf}"
-    check_pkgs "${PWD}" "${dist_pkg}"
-    check_pkgs "${PWD}" "${docker_file}"
+    #echo "3. Checking all files."
+    #check_pkgs "${PWD}" "${nginx_conf}"
+    #check_pkgs "${PWD}" "${dist_pkg}"
+    #check_pkgs "${PWD}" "${docker_file}"
     
     # 导入基础镜像
-    import_docker_img
+    #import_docker_img
     
     # 构建人才认定镜像
     build_talent_img
@@ -91,30 +91,32 @@ function download_docker_img()
 
 function build_src()
 {
-   cd ${PWD}/talent-certificate
-   yum install npm -y
-   npm install --no-optional --verbose
-   if [ $? -eq 0 ]; then
-        echo "npm install success."
-   else
-        echo "npm install failed."
-        exit 1
-   fi
-   npm run build
-   if [ $? -eq 0 ]; then
-        echo "npm run build success."
-   else
-        echo "run build failed."
-        exit 1
-   fi
-   if [ -d "dist" ]; then
-        echo "zip dist package."
-        zip -r ../dist.zip dist/
-        cd -
-   else
-        echo "dist dir is not exist."
-        exit 1
-   fi
+   #cd ${PWD}/talent-certificate
+   cd ${PWD}
+   tar -czf talent-certificate.tar.gz talent-certificate/
+   #yum install npm -y
+   #npm install --no-optional --verbose
+   #if [ $? -eq 0 ]; then
+   #     echo "npm install success."
+   #else
+   #     echo "npm install failed."
+   #     exit 1
+   #fi
+   #npm run build
+   #if [ $? -eq 0 ]; then
+   #     echo "npm run build success."
+   #else
+   #     echo "run build failed."
+   #     exit 1
+   #fi
+   #if [ -d "dist" ]; then
+   #     echo "zip dist package."
+   #     zip -r ../dist.zip dist/
+   #     cd -
+   #else
+   #     echo "dist dir is not exist."
+   #     exit 1
+   #fi
 
 }
 
@@ -188,6 +190,7 @@ if [ $? -eq 0 ]; then
     sleep 3
     docker rmi -f $(docker images -aq) >/dev/null 2>&1
     docker load -i "${PWD}/build_reuslt/${talent_image}.tar"
+    rm -rf ${PWD}/talent-certificate.tar.gz
 else
     echo "Building talent image failed."
     exit 1
