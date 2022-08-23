@@ -37,7 +37,7 @@ function main()
     #download_docker_img
     
     # 编译src文件
-    build_src
+    #build_src
     
     # 检查文件
     #echo "3. Checking all files."

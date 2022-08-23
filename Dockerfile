@@ -11,11 +11,9 @@ RUN yum install -y nginx unzip net-tools npm
 RUN mkdir -p /etc/pki/nginx
 
 #拷贝本地文件
-COPY talent-certificate.tar.gz /opt
+COPY talent-certificate/ /opt/talent-certificate
 
-#编译talent-certificate.tar.gz
-WORKDIR /opt
-RUN tar -xzf talent-certificate.tar.gz
+#编译talent-certificate
 WORKDIR /opt/talent-certificate
 RUN npm install --no-optional --verbose
 RUN npm run build
@@ -38,7 +36,7 @@ RUN chown -R nginx:nginx dist/
 
 #删除源码包
 WORKDIR /opt/
-RUN rm -rf talent-certificate/ talent-certificate.tar.gz
+RUN rm -rf talent-certificate/
 
 #对外暴露的端口
 EXPOSE 80
