@@ -29,6 +29,7 @@
             v-for="item in partnerImg"
             :key="item.id"
             class="rz-signUp-container-box"
+            @click="imgClick(item.id)"
           >
             <img :src="item.src" alt="partnerImg" />
           </div>
@@ -61,21 +62,30 @@ export default {
       containerTitle: "我要报名",
       containerName: "合作委托声明",
       containerContent:
-        "为方便对参加openEuler社区人才认证学员进行评定认证考试，openEuler社区优选业界资深操作系统评定认证考试机构。openEuler社区已经对认证的合作伙伴做相关授权。",
+        "为方便对参加openEuler社区人才评定学员进行评定考试，openEuler社区优选业界资深操作系统评定考试机构。openEuler社区已经对评定考试的合作伙伴做相关授权。",
       containerSecondName: "报名入口",
       containerSecondContent:
-        "当前已经授权如下合作伙伴，选择任一合作伙伴即可跳转至认证报名页面：",
+        "当前已经授权如下合作伙伴，选择任一合作伙伴即可跳转至评定考试报名页面：",
       partnerImg: [
-        { id: "01", src: require("../../assets/images/company.svg") },
-        { id: "02", src: require("../../assets/images/company.svg") },
-        { id: "03", src: require("../../assets/images/company.svg") },
-        { id: "04", src: require("../../assets/images/company.svg") },
+        { id: "01", src: require("../../assets/images/mobile/rtdl.png") },
+        { id: "02", src: require("../../assets/images/mobile/hw.png") },
+        { id: "03", src: require("../../assets/images/mobile/zsoft.png") },
+        // { id: "04", src: require("../../assets/images/company.svg") },
       ],
     };
   },
   methods: {
     backToHome() {
       this.$router.push("/");
+    },
+    imgClick(item) {
+      if (item === "01") {
+        window.open("https://www.issedu.com/");
+      } else if (item === "02") {
+        window.open("https://e.huawei.com/cn/talent/portal/#/");
+      } else if (item === "03") {
+        window.open("https://www.chinasofti.com/");
+      }
     },
   },
 };
@@ -171,7 +181,7 @@ export default {
           background-color: #ffffff;
           max-height: 7.5rem;
           overflow: hidden;
-
+          cursor: pointer;
           img {
             display: block;
             width: 100%;
