@@ -36,11 +36,11 @@ export default {
         { id: "01", src: require("../../assets/images/mobile/rtdl.png") },
         { id: "02", src: require("../../assets/images/mobile/hw.png") },
         { id: "03", src: require("../../assets/images/mobile/zsoft.png") },
-        // { id: "04", src: require("../../assets/images/company.svg") },
-        // { id: "05", src: require("../../assets/images/company.svg") },
-        // { id: "06", src: require("../../assets/images/company.svg") },
-        // { id: "07", src: require("../../assets/images/company.svg") },
-        // { id: "08", src: require("../../assets/images/company.svg") },
+        { id: "04", src: require("../../assets/images/company.svg") },
+        { id: "05", src: require("../../assets/images/company.svg") },
+        { id: "06", src: require("../../assets/images/company.svg") },
+        { id: "07", src: require("../../assets/images/company.svg") },
+        { id: "08", src: require("../../assets/images/company.svg") },
       ],
     };
   },
@@ -94,9 +94,10 @@ export default {
       justify-content: center;
       align-items: center;
       border: 0.0625rem solid #e5e5e5;
-      background-color: #ffffff;
+      //background-color: #ffffff;
       max-height: 7.5rem;
       overflow: hidden;
+      background: white;
       img {
         display: block;
         width: 100%;

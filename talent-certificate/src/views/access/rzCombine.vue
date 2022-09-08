@@ -25,12 +25,11 @@ export default {
         { id: "01", src: require("../../assets/images/issedu.png") },
         { id: "02", src: require("../../assets/images/huawei.png") },
         { id: "03", src: require("../../assets/images/zsoft.png") },
-        // { id: "03", src: require("../../assets/images/company.svg") },
-        // { id: "04", src: require("../../assets/images/company.svg") },
-        // { id: "05", src: require("../../assets/images/company.svg") },
-        // { id: "06", src: require("../../assets/images/company.svg") },
-        // { id: "07", src: require("../../assets/images/company.svg") },
-        // { id: "08", src: require("../../assets/images/company.svg") },
+        { id: "04", src: require("../../assets/images/company.svg") },
+        { id: "05", src: require("../../assets/images/company.svg") },
+        { id: "06", src: require("../../assets/images/company.svg") },
+        { id: "07", src: require("../../assets/images/company.svg") },
+        { id: "08", src: require("../../assets/images/company.svg") },
       ],
     };
   },
@@ -64,6 +63,7 @@ export default {
     height: 120px;
     margin: 0 -1px -1px 0;
     cursor: pointer;
+    background: white;
     .combine-img {
       justify-content: center;
       align-items: center;

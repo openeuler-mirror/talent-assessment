@@ -70,7 +70,7 @@ export default {
         { id: "01", src: require("../../assets/images/mobile/rtdl.png") },
         { id: "02", src: require("../../assets/images/mobile/hw.png") },
         { id: "03", src: require("../../assets/images/mobile/zsoft.png") },
-        // { id: "04", src: require("../../assets/images/company.svg") },
+        { id: "04", src: require("../../assets/images/company.svg") },
       ],
     };
   },
@@ -82,7 +82,9 @@ export default {
       if (item === "01") {
         window.open("https://www.issedu.com/");
       } else if (item === "02") {
-        window.open("https://e.huawei.com/cn/talent/portal/#/");
+        window.open(
+          "https://e.huawei.com/cn/talent/#/cert/product-details?certifiedProductId=383&amp%3BauthenticationLevel=CTYPE_CARE_HCIA&amp%3BtechnicalField=PSC&amp%3Bversion=1.0"
+        );
       } else if (item === "03") {
         window.open("https://www.chinasofti.com/");
       }
