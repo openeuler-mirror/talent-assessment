@@ -7,7 +7,9 @@
     <div class="center-button">
       <div class="operate-item" @click="signUpClick">
         <div class="operate-item-text">
-          <span style="margin-left: 1.25rem">我要报名<i class="operate-item-text-icon">→</i></span>
+          <span style="margin-left: 1.25rem"
+            >我要报名<i class="operate-item-text-icon">→</i></span
+          >
         </div>
       </div>
       <div
