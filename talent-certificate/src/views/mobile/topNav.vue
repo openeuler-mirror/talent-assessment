@@ -7,9 +7,7 @@
     <div class="center-button">
       <div class="operate-item" @click="signUpClick">
         <div class="operate-item-text">
-          <span style="margin-left: 1.25rem"
-            >我要报名<i class="operate-item-text-icon">→</i></span
-          >
+          <span style="margin-left: 1.25rem">我要报名<i class="operate-item-text-icon">→</i></span>
         </div>
       </div>
       <div
@@ -49,7 +47,11 @@ export default {
       this.$router.push("/signUp");
     },
     queryClick() {
-      this.$router.push("/query");
+      // this.$router.push("/query");
+      window.open(
+        "https://v1.openeuler.org/zh/community/certification-services/search.html",
+        "_blank"
+      );
     },
   },
 };

@@ -11,16 +11,21 @@
       <div class="page-main-list">
         <div class="list-title">合作委托声明</div>
         <div class="list-content">
-          为方便对参加openEuler社区人才认证学员进行评定认证考试，openEuler社区优选业界资深操作系统评定认证考试机构。openEuler社区已经对认证的合作伙伴做相关授权。
+          为方便对参加openEuler社区人才评定学员进行评定考试，openEuler社区优选业界资深操作系统评定考试机构。openEuler社区已经对评定考试的合作伙伴做相关授权。
         </div>
       </div>
       <div class="page-main-list">
         <div class="list-title">报名入口</div>
         <div class="list-content">
-          当前已经授权如下合作伙伴，选择任一合作伙伴即可跳转至认证报名页面：
+          当前已经授权如下合作伙伴，选择任一合作伙伴即可跳转至评定考试报名页面：
         </div>
         <div class="list-img">
-          <div class="list-img-box" v-for="item in partnerImg" :key="item.id">
+          <div
+            class="list-img-box"
+            v-for="item in partnerImg"
+            :key="item.id"
+            @click="itemClicked(item.id)"
+          >
             <img class="list-img-item" :src="item.src" alt="partnerImg" />
           </div>
         </div>
@@ -45,16 +50,26 @@ export default {
   data() {
     return {
       partnerImg: [
-        { id: "01", src: require("../../assets/images/company.svg") },
-        { id: "02", src: require("../../assets/images/company.svg") },
-        { id: "03", src: require("../../assets/images/company.svg") },
-        { id: "04", src: require("../../assets/images/company.svg") },
+        { id: "01", src: require("../../assets/images/issedu.png") },
+        { id: "02", src: require("../../assets/images/huawei.png") },
+        { id: "03", src: require("../../assets/images/zsoft.png") },
+        // { id: "03", src: require("../../assets/images/company.svg") },
+        // { id: "04", src: require("../../assets/images/company.svg") },
       ],
     };
   },
   methods: {
     pageJump() {
       window.open("https://www.openeuler.org/zh/");
+    },
+    itemClicked(pId) {
+      if (pId === "01") {
+        window.open("https://www.issedu.com/", "_blank");
+      } else if (pId === "02") {
+        window.open("https://e.huawei.com/cn/talent/portal/#/", "_blank");
+      } else if (pId === "03") {
+        window.open("https://www.chinasofti.com/", "_blank");
+      }
     },
   },
 };
@@ -120,10 +135,10 @@ export default {
         width: 330px;
         height: 124px;
         margin: 0 -1px -1px 0;
+        cursor: pointer;
         .list-img-item {
           justify-content: center;
           align-items: center;
-          //cursor: pointer;
           width: 100%;
           height: 100%;
         }
@@ -191,10 +206,10 @@ export default {
           width: 330px;
           height: 124px;
           margin: 0 -1px -1px 0;
+          cursor: pointer;
           .list-img-item {
             justify-content: center;
             align-items: center;
-            //cursor: pointer;
             width: 100%;
             height: 100%;
           }

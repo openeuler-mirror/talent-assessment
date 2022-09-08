@@ -67,10 +67,14 @@ export default {
         });
         window.open(routeUrl.href, "_blank");
       } else if (data === "sixth") {
-        let routeUrl = this.$router.resolve({
-          path: "/certificateQuery",
-        });
-        window.open(routeUrl.href, "_blank");
+        // let routeUrl = this.$router.resolve({
+        //   path: "/certificateQuery",
+        // });
+        // window.open(routeUrl.href, "_blank");
+        window.open(
+          "https://v1.openeuler.org/zh/community/certification-services/search.html",
+          "_blank"
+        );
       }
     },
   },

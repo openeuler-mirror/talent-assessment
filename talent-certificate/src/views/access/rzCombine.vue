@@ -1,6 +1,11 @@
 <template>
   <div class="rzCombine">
-    <div class="combine-container" v-for="item in partnerImg" :key="item.id">
+    <div
+      class="combine-container"
+      v-for="item in partnerImg"
+      :key="item.id"
+      @click="itemClicked(item.id)"
+    >
       <img class="combine-img" :src="item.src" alt="partnerImg" />
     </div>
   </div>
@@ -17,16 +22,28 @@ export default {
   data() {
     return {
       partnerImg: [
-        { id: "01", src: require("../../assets/images/company.svg") },
-        { id: "02", src: require("../../assets/images/company.svg") },
-        { id: "03", src: require("../../assets/images/company.svg") },
-        { id: "04", src: require("../../assets/images/company.svg") },
-        { id: "05", src: require("../../assets/images/company.svg") },
-        { id: "06", src: require("../../assets/images/company.svg") },
-        { id: "07", src: require("../../assets/images/company.svg") },
-        { id: "08", src: require("../../assets/images/company.svg") },
+        { id: "01", src: require("../../assets/images/issedu.png") },
+        { id: "02", src: require("../../assets/images/huawei.png") },
+        { id: "03", src: require("../../assets/images/zsoft.png") },
+        // { id: "03", src: require("../../assets/images/company.svg") },
+        // { id: "04", src: require("../../assets/images/company.svg") },
+        // { id: "05", src: require("../../assets/images/company.svg") },
+        // { id: "06", src: require("../../assets/images/company.svg") },
+        // { id: "07", src: require("../../assets/images/company.svg") },
+        // { id: "08", src: require("../../assets/images/company.svg") },
       ],
     };
+  },
+  methods: {
+    itemClicked(pId) {
+      if (pId === "01") {
+        window.open("https://www.issedu.com/", "_blank");
+      } else if (pId === "02") {
+        window.open("https://e.huawei.com/cn/talent/portal/#/", "_blank");
+      } else if (pId === "03") {
+        window.open("https://www.chinasofti.com/", "_blank");
+      }
+    },
   },
 };
 </script>
@@ -46,10 +63,10 @@ export default {
     width: 351px;
     height: 120px;
     margin: 0 -1px -1px 0;
+    cursor: pointer;
     .combine-img {
       justify-content: center;
       align-items: center;
-      //cursor: pointer;
       width: 100%;
       height: 100%;
     }
@@ -72,10 +89,10 @@ export default {
       width: 351px;
       height: 120px;
       margin: 0 -1px -1px 0;
+      cursor: pointer;
       .combine-img {
         justify-content: center;
         align-items: center;
-        //cursor: pointer;
         width: 100%;
         height: 100%;
       }

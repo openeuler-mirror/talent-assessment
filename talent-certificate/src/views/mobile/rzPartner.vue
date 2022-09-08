@@ -12,7 +12,7 @@
         v-for="item in partnerImg"
         :key="item.id"
       >
-        <div>
+        <div style="cursor: pointer" @click="imgClick(item.id)">
           <img :src="item.src" alt="partnerImg" />
         </div>
       </div>
@@ -33,16 +33,27 @@ export default {
       firstText: "人才评定合作伙伴",
       secondText: "合作伙伴招募详细内容可联系oecxonline@openeuler.io",
       partnerImg: [
-        { id: "01", src: require("../../assets/images/company.svg") },
-        { id: "02", src: require("../../assets/images/company.svg") },
-        { id: "03", src: require("../../assets/images/company.svg") },
-        { id: "04", src: require("../../assets/images/company.svg") },
-        { id: "05", src: require("../../assets/images/company.svg") },
-        { id: "06", src: require("../../assets/images/company.svg") },
-        { id: "07", src: require("../../assets/images/company.svg") },
-        { id: "08", src: require("../../assets/images/company.svg") },
+        { id: "01", src: require("../../assets/images/mobile/rtdl.png") },
+        { id: "02", src: require("../../assets/images/mobile/hw.png") },
+        { id: "03", src: require("../../assets/images/mobile/zsoft.png") },
+        // { id: "04", src: require("../../assets/images/company.svg") },
+        // { id: "05", src: require("../../assets/images/company.svg") },
+        // { id: "06", src: require("../../assets/images/company.svg") },
+        // { id: "07", src: require("../../assets/images/company.svg") },
+        // { id: "08", src: require("../../assets/images/company.svg") },
       ],
     };
+  },
+  methods: {
+    imgClick(item) {
+      if (item === "01") {
+        window.open("https://www.issedu.com/");
+      } else if (item === "02") {
+        window.open("https://e.huawei.com/cn/talent/portal/#/");
+      } else if (item === "03") {
+        window.open("https://www.chinasofti.com/");
+      }
+    },
   },
 };
 </script>

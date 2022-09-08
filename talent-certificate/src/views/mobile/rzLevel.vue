@@ -59,7 +59,7 @@
 export default {
   data() {
     return {
-      title: "认证等级",
+      title: "评定等级",
       levelArr: [
         {
           id: "first",

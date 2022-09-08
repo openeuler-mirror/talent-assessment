@@ -35,24 +35,24 @@
     <div class="access-container">
       <div class="access-system">
         <div class="part-title" style="margin-top: 70px; margin-bottom: 25px">
-          <div class="part-title-size">认证体系</div>
+          <div class="part-title-size">评定体系</div>
         </div>
         <div class="part-container">
           <div class="part-container-text" style="margin-bottom: 15px">
             <span>
-              随着openEuler及其发行版本在各个行业使用量逐年增多，相关人才的认证诉求愈发强烈，故由openEuler社区联合伙伴共同打造openEuler人才认证体系。
+              随着openEuler及其发行版本在各个行业使用量逐年增多，相关人才的评定诉求愈发强烈，故由openEuler社区联合伙伴共同打造openEuler人才评定体系。
             </span>
           </div>
           <div class="part-container-text">
             <span>
-              openEuler人才认证体系旨在帮助企业快速培养专业openEuler生态使用人才；推动相关从业人员高效获得权威资质认证；促使技术爱好者踊跃融入社区技术生态建设。
+              openEuler人才评定体系旨在帮助企业快速培养专业openEuler生态使用人才；推动相关从业人员高效获得权威资质评定；促使技术爱好者踊跃融入社区技术生态建设。
             </span>
           </div>
         </div>
       </div>
       <div class="access-system">
         <div class="part-title" style="margin-top: 70px; margin-bottom: 30px">
-          <div class="part-title-size">认证等级</div>
+          <div class="part-title-size">评定等级</div>
         </div>
         <div class="part-container">
           <r-z-level></r-z-level>
@@ -60,7 +60,7 @@
       </div>
       <div class="access-system">
         <div class="part-title" style="margin-top: 70px; margin-bottom: 30px">
-          <div class="part-title-size">认证流程</div>
+          <div class="part-title-size">评定流程</div>
         </div>
         <div class="part-container">
           <r-z-process></r-z-process>
@@ -119,10 +119,13 @@ export default {
       window.open(routeUrl.href, "_blank");
     },
     queryClick() {
-      let routeUrl = this.$router.resolve({
-        path: "/certificateQuery",
-      });
-      window.open(routeUrl.href, "_blank");
+      // let routeUrl = this.$router.resolve({
+      //   path: "https://v1.openeuler.org/zh/community/certification-services/search.html",
+      // });
+      window.open(
+        "https://v1.openeuler.org/zh/community/certification-services/search.html",
+        "_blank"
+      );
     },
   },
 };

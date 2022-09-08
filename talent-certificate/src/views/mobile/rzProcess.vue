@@ -31,7 +31,7 @@ export default {
   name: "rzProcess",
   data() {
     return {
-      title: "认证流程",
+      title: "评定流程",
       processData: [
         {
           id: "first",
@@ -77,7 +77,11 @@ export default {
       if (data === "first") {
         this.$router.push("/signUp");
       } else if (data === "sixth") {
-        this.$router.push("/query");
+        // this.$router.push("/query");
+        window.open(
+          "https://v1.openeuler.org/zh/community/certification-services/search.html",
+          "_blank"
+        );
       }
     },
   },
