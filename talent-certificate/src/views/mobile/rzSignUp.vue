@@ -80,7 +80,9 @@ export default {
     },
     imgClick(item) {
       if (item === "01") {
-        window.open("https://www.issedu.com/");
+        window.open(
+          "https://www.itongxue.net/itxcertificationdetails?index=4&level=0&type=huawei"
+        );
       } else if (item === "02") {
         window.open(
           "https://e.huawei.com/cn/talent/#/cert/product-details?certifiedProductId=383&amp%3BauthenticationLevel=CTYPE_CARE_HCIA&amp%3BtechnicalField=PSC&amp%3Bversion=1.0"
