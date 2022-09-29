@@ -81,7 +81,7 @@ export default {
     imgClick(item) {
       if (item === "01") {
         window.open(
-          "https://www.itongxue.net/itxcertificationdetails?index=4&level=0&type=huawei"
+          "https://www.itongxue.net/itxcertificationdetails?id=26c81b6ed7f11be0b2491f9c58d8b22c"
         );
       } else if (item === "02") {
         window.open(
