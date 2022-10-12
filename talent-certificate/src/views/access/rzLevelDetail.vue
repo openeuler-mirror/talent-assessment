@@ -69,8 +69,10 @@ export default {
       courseDetailIntro:
         "社区根据openEuler技术发展路线与市场需求，规划设计了《openEuler OECA认证课程》，本课程以内部原理、实践实战为主，理论与实践相结合。课程内容涵盖操作系统安装升级、系统服务配置和管理、ssh管理及安全、用户和群组管理等课程内容。",
       courseLink: "课程链接",
+      // courseLinkContent:
+      //   "https://training-assessment.osinfra.cn/portal/1519850993951571970/more?cardId=s9x1ddqboi&activeIndex=0&pageDetailsUuid=626b3f291baa0d665aa49141&sxz-lang=zh_CN",
       courseLinkContent:
-        "https://training-assessment.osinfra.cn/portal/1519850993951571970/more?cardId=s9x1ddqboi&activeIndex=0&pageDetailsUuid=626b3f291baa0d665aa49141&sxz-lang=zh_CN",
+        "https://partner.huawei.com/university/webui_portal/#/zone?customizedZoneId=VxkRMyFZWD7vX1uyOfwZFpBugag",
       courseOutline: "课程大纲",
       outlineArr: [
         {
