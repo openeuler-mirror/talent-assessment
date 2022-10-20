@@ -23,8 +23,8 @@ export default {
     return {
       partnerImg: [
         { id: "01", src: require("../../assets/images/issedu.png") },
-        { id: "02", src: require("../../assets/images/huawei.png") },
-        { id: "03", src: require("../../assets/images/zsoft.png") },
+        { id: "02", src: require("../../assets/images/huawei-old.png") },
+        { id: "03", src: require("../../assets/images/zsoft-old.png") },
         { id: "04", src: require("../../assets/images/company.svg") },
         { id: "05", src: require("../../assets/images/company.svg") },
         { id: "06", src: require("../../assets/images/company.svg") },
