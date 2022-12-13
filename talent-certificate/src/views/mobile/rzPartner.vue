@@ -36,11 +36,12 @@ export default {
         { id: "01", src: require("../../assets/images/mobile/rtdl.png") },
         { id: "02", src: require("../../assets/images/mobile/hw.png") },
         { id: "03", src: require("../../assets/images/mobile/zsoft.png") },
-        { id: "04", src: require("../../assets/images/company.svg") },
-        { id: "05", src: require("../../assets/images/company.svg") },
-        { id: "06", src: require("../../assets/images/company.svg") },
-        { id: "07", src: require("../../assets/images/company.svg") },
-        { id: "08", src: require("../../assets/images/company.svg") },
+        { id: "04", src: require("../../assets/images/shenzhoushuma.png") },
+        { id: "05", src: require("../../assets/images/shenzhouxinqiao.png") },
+        { id: "06", src: require("../../assets/images/tongxintuanjian.png") },
+        { id: "07", src: require("../../assets/images/jiangsurunhe.png") },
+        { id: "08", src: require("../../assets/images/dongruanjituan.png") },
+        // { id: "08", src: require("../../assets/images/company.svg") },
       ],
     };
   },
@@ -52,6 +53,16 @@ export default {
         window.open("https://e.huawei.com/cn/talent/portal/#/");
       } else if (item === "03") {
         window.open("https://www.chinasofti.com/");
+      } else if (item === "04") {
+        window.open("https://www.digitalchina.com/", "_blank");
+      } else if (item === "05") {
+        window.open("http://www.sino-bridge.com", "_blank");
+      } else if (item === "06") {
+        window.open("https://www.uniontech.com/", "_blank");
+      } else if (item === "07") {
+        window.open("https://www.hoperun.com/", "_blank");
+      } else if (item === "08") {
+        window.open("https://www.neusoft.com/cn/", "_blank");
       }
     },
   },
