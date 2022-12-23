@@ -79,7 +79,7 @@ export default {
       } else if (data === "sixth") {
         // this.$router.push("/query");
         window.open(
-          "https://v1.openeuler.org/zh/community/certification-services/search.html",
+          "https://www.openeuler.org/zh/community/certification-services/search.html",
           "_blank"
         );
       }

@@ -120,10 +120,10 @@ export default {
     },
     queryClick() {
       // let routeUrl = this.$router.resolve({
-      //   path: "https://v1.openeuler.org/zh/community/certification-services/search.html",
+      //   path: "https://www.openeuler.org/zh/community/certification-services/search.html",
       // });
       window.open(
-        "https://v1.openeuler.org/zh/community/certification-services/search.html",
+        "https://www.openeuler.org/zh/community/certification-services/search.html",
         "_blank"
       );
     },
