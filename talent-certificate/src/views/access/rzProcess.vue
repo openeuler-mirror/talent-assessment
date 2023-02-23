@@ -32,28 +32,23 @@ export default {
           src: require("../../assets/images/process01.svg"),
         },
         {
-          id: "second",
-          name: "2.参加培训",
-          src: require("../../assets/images/process02.svg"),
-        },
-        {
           id: "third",
-          name: "3.考场查询",
+          name: "2.考场查询",
           src: require("../../assets/images/process03.svg"),
         },
         {
           id: "forth",
-          name: "4.预约考试",
+          name: "3.预约考试",
           src: require("../../assets/images/process04.svg"),
         },
         {
           id: "fifth",
-          name: "5.参加考试",
+          name: "4.参加考试",
           src: require("../../assets/images/process05.svg"),
         },
         {
           id: "sixth",
-          name: "6.证书查询",
+          name: "5.证书查询",
           src: require("../../assets/images/process06.svg"),
         },
       ],
@@ -67,10 +62,6 @@ export default {
         });
         window.open(routeUrl.href, "_blank");
       } else if (data === "sixth") {
-        // let routeUrl = this.$router.resolve({
-        //   path: "/certificateQuery",
-        // });
-        // window.open(routeUrl.href, "_blank");
         window.open(
           "https://www.openeuler.org/zh/community/certification-services/search.html",
           "_blank"
@@ -85,7 +76,7 @@ export default {
 .rzProcess {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
   .process-card {
     padding: 0 23.5px 0 0;
     cursor: not-allowed;

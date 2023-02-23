@@ -74,11 +74,11 @@
           <div style="font-size: 14px; color: #555555; font-weight: 400">
             合作伙伴招募详细内容可联系
             <a
-              href="mailto:oecxonline@openeuler.io"
+              href="mailto:oecxonline@openeuler.sh"
               target="_blank"
               class="mail"
             >
-              oecxonline@openeuler.io
+              oecxonline@openeuler.sh
             </a>
           </div>
         </div>

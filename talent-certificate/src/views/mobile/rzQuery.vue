@@ -67,10 +67,10 @@ export default {
       secondMenu: "证书查询",
       containerTitle: "证书查询",
       containerContent:
-        "请将您的姓名、认证考试所用的电子邮箱、手机号码、准考证号等信息发送至邮箱oecxonline@openeuler.io，您的证书将通过邮箱发放至您的认证考试注册邮箱。",
+        "请将您的姓名、认证考试所用的电子邮箱、手机号码、准考证号等信息发送至邮箱oecxonline@openeuler.sh，您的证书将通过邮箱发放至您的认证考试注册邮箱。",
       mailTitle: "邮件模版",
       receiveTitle: "收件人：",
-      receiveAddress: "oecxonline@openeuler.io",
+      receiveAddress: "oecxonline@openeuler.sh",
       subjectTitle: "邮件主题：",
       subjectContent: "openEuler社区人才认证-个人证书查询信息",
       messageTitle: "邮件正文：",

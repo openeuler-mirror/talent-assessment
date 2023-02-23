@@ -12,10 +12,10 @@
         <div class="list-content-tip">
           请将您的姓名、认证考试所用的电子邮箱、手机号码、准考证号等信息发送至邮箱
           <a
-            href="mailto:oecxonline@openeuler.io"
+            href="mailto:oecxonline@openeuler.sh"
             target="_blank"
             style="color: #002fa7"
-            >oecxonline@openeuler.io </a
+            >oecxonline@openeuler.sh </a
           >，您的证书将通过邮箱发放至您的认证考试注册邮箱。
         </div>
       </div>
@@ -25,7 +25,7 @@
           <div class="content-text">
             <span class="text-left">收件人：</span>
             <span class="text-right" style="padding-left: 28px">
-              oecxonline@openeuler.io
+              oecxonline@openeuler.sh
             </span>
           </div>
           <div class="content-text">
