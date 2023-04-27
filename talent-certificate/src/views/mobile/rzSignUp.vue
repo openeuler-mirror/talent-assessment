@@ -31,7 +31,11 @@
             class="rz-signUp-container-box"
             @click="imgClick(item.id)"
           >
-            <img :src="item.src" alt="partnerImg" />
+            <img
+              :class="item.id === '04' ? 'img-tongxin' : 'img'"
+              :src="item.src"
+              alt="partnerImg"
+            />
           </div>
         </div>
       </div>
@@ -70,7 +74,7 @@ export default {
         { id: "01", src: require("../../assets/images/mobile/rtdl.png") },
         { id: "02", src: require("../../assets/images/mobile/hw.png") },
         { id: "03", src: require("../../assets/images/mobile/zsoft.png") },
-        { id: "04", src: require("../../assets/images/company.svg") },
+        { id: "04", src: require("../../assets/images/tongxinlogo.svg") },
       ],
     };
   },
@@ -91,6 +95,8 @@ export default {
         );
       } else if (item === "03") {
         window.open("https://www.chinasofti.com/");
+      } else if (item === "04") {
+        window.open("https://edu.uniontech.com/openEuler", "_blank");
       }
     },
   },
@@ -194,6 +200,11 @@ export default {
             width: 100%;
             height: 100%;
             border: 0;
+          }
+          .img-tongxin {
+            width: 6rem;
+            height: 100%;
+            display: block;
           }
         }
       }
