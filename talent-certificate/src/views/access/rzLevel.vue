@@ -135,7 +135,7 @@ export default {
           display: flex;
           flex: 1;
           align-items: center;
-          font-size: 22px;
+          font-size: 18px;
           color: #ffffff;
           text-align: center;
           line-height: 26px;
