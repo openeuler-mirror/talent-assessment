@@ -7,6 +7,7 @@
     </div>
     <div class="detailContent">
       <div class="detailTitle">{{ titleName }}</div>
+      <div class="secondaryTitle">{{ secondaryTitle }}</div>
       <div class="page-main-divider"></div>
       <!-- 课程介绍 -->
       <div class="detailIntroduce">
@@ -64,7 +65,8 @@ export default {
   },
   data() {
     return {
-      titleName: "初级 OECA课程",
+      titleName: "OECA课程",
+      secondaryTitle: "openEuler Certified Associate",
       courseIntro: "课程介绍",
       courseDetailIntro:
         "社区根据openEuler技术发展路线与市场需求，规划设计了《openEuler OECA认证课程》，本课程以内部原理、实践实战为主，理论与实践相结合。课程内容涵盖操作系统安装升级、系统服务配置和管理、ssh管理及安全、用户和群组管理等课程内容。",
@@ -72,7 +74,7 @@ export default {
       // courseLinkContent:
       //   "https://training-assessment.osinfra.cn/portal/1519850993951571970/more?cardId=s9x1ddqboi&activeIndex=0&pageDetailsUuid=626b3f291baa0d665aa49141&sxz-lang=zh_CN",
       courseLinkContent:
-        "https://partner.huawei.com/university/webui_portal/#/zone?customizedZoneId=VxkRMyFZWD7vX1uyOfwZFpBugag",
+        "https://hiss.shixizhi.huawei.com/center/privateCenter.htm?schoolId=1643780836745113602&type=studyCenter_LearningTask&sxz-lang=zh_CN&mapDetail=3&mapDetailId=1675057597212368897",
       courseOutline: "课程大纲",
       outlineArr: [
         {
@@ -187,6 +189,10 @@ export default {
     background: #ffffff;
     box-shadow: 0 1px 5px 0 rgba(45, 47, 51, 0.1);
     transition: box-shadow 1s;
+    .secondaryTitle {
+      font-size: 20px;
+      font-weight: 500;
+    }
     .detailTitle {
       display: flex;
       align-items: center;
@@ -198,7 +204,7 @@ export default {
     .page-main-divider {
       background: #e5e5e5;
       height: 1px;
-      margin: 40px 0;
+      margin: 25px 0 40px;
     }
     .detailIntroduce {
       //margin-top: 25px;
