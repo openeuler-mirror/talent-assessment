@@ -19,13 +19,18 @@
         <div class="title">{{ courseLink }}</div>
         <!-- <div class="content"> {{ courseLinkContent }} </div> -->
         <div>
-          <a class="content" :href="courseLinkContent" target="_blank">
+          <a
+            :style="{ 'font-size': outlineArr.length > 0 ? '14px' : '18px' }"
+            class="content"
+            :href="courseLinkContent"
+            target="_blank"
+          >
             {{ courseLinkContent }}
           </a>
         </div>
       </div>
       <!-- 课程大纲 -->
-      <div class="detailOutline">
+      <div class="detailOutline" v-if="outlineArr.length">
         <div class="title">{{ courseOutline }}</div>
         <div class="content">
           <div
@@ -65,18 +70,25 @@ export default {
   },
   data() {
     return {
-      titleName: "OECA课程",
-      secondaryTitle: "openEuler Certified Associate",
+      titleName: "",
+      secondaryTitle: "",
       courseIntro: "课程介绍",
-      courseDetailIntro:
-        "社区根据openEuler技术发展路线与市场需求，规划设计了《openEuler OECA认证课程》，本课程以内部原理、实践实战为主，理论与实践相结合。课程内容涵盖操作系统安装升级、系统服务配置和管理、ssh管理及安全、用户和群组管理等课程内容。",
+      courseDetailIntro: "",
       courseLink: "课程链接",
-      // courseLinkContent:
-      //   "https://training-assessment.osinfra.cn/portal/1519850993951571970/more?cardId=s9x1ddqboi&activeIndex=0&pageDetailsUuid=626b3f291baa0d665aa49141&sxz-lang=zh_CN",
-      courseLinkContent:
-        "https://hiss.shixizhi.huawei.com/center/privateCenter.htm?schoolId=1643780836745113602&type=studyCenter_LearningTask&sxz-lang=zh_CN&mapDetail=3&mapDetailId=1675057597212368897",
+      courseLinkContent: "",
       courseOutline: "课程大纲",
-      outlineArr: [
+      outlineArr: [],
+    };
+  },
+  created() {
+    if (this.$route.query.type === "first") {
+      this.titleName = "OECA课程";
+      this.secondaryTitle = "openEuler Certified Associate";
+      this.courseDetailIntro =
+        "社区根据openEuler技术发展路线与市场需求，规划设计了《openEuler OECA认证课程》，本课程以内部原理、实践实战为主，理论与实践相结合。课程内容涵盖操作系统安装升级、系统服务配置和管理、ssh管理及安全、用户和群组管理等课程内容。";
+      this.courseLinkContent =
+        "https://hiss.shixizhi.huawei.com/center/privateCenter.htm?schoolId=1643780836745113602&type=studyCenter_LearningTask&sxz-lang=zh_CN&mapDetail=3&mapDetailId=1675057597212368897";
+      this.outlineArr = [
         {
           serialNum: "01",
           name: "系统安装及自动安装",
@@ -149,8 +161,15 @@ export default {
           imgSrc: require("../../assets/images/time.png"),
           timeNum: "1.5小时",
         },
-      ],
-    };
+      ];
+    } else {
+      this.titleName = "OECP课程";
+      this.secondaryTitle = "openEuler Certified Professional";
+      this.courseDetailIntro =
+        "本课程定位于培养具备openEuler操作系统管理及应用的高级工程师。通过本课程的学习，将掌握openEuler操作系统常用服务配置、安全管理、故障处理工具，以及虚拟化、容器化基础知识等。课程中也包含众多实践操作，边学边练，理论与实践相互印证，提升知识掌握深度。";
+      this.courseLinkContent = "课程正在开发中，敬请期待";
+      this.outlineArr = [];
+    }
   },
   methods: {
     pageJump() {
