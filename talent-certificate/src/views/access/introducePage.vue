@@ -45,7 +45,7 @@
           </div>
           <div class="part-container-text">
             <span>
-              openEuler人才评定体系旨在帮助企业快速培养专业openEuler生态使用人才；推动相关从业人员高效获得权威资质评定；促使技术爱好者踊跃融入社区技术生态建设。
+              openEuler人才评定体系旨在帮助企业快速培养专业openEuler生态人才；推动相关从业人员高效获得权威资质评定；促使技术爱好者踊跃融入社区技术生态建设。
             </span>
           </div>
         </div>

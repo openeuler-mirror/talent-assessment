@@ -64,7 +64,7 @@ export default {
           name: "OECA",
           content:
             "面向openEuler操作系统的管理服务人员。能够熟练掌握OS安装、升级、常用服务配置、管理等基础使用能力；以及熟悉服务规范、服务礼仪、服务安全红线、服务文档编写等专业能力。",
-          detail: "查看课程详情",
+          detail: "查看详情",
         },
         {
           id: "second",
@@ -72,7 +72,7 @@ export default {
           name: "OECP",
           content:
             "面向openEuler操作系统的中级服务人员、开发人员。对于服务人员需要能够通过日志、配置做问题诊断和处理且运维过程中可以熟练使用shell/python/perl命令及脚本编写。对于开发人员需要熟悉主流大型软件编写语言（C/C++/JAVA/python/go等），掌握linux内核模块开发技能，参与到openEuler社区各开源项目代码提交、问题交流。",
-          detail: "敬请期待课程详情",
+          detail: "敬请期待详情",
         },
         {
           id: "third",
@@ -80,7 +80,7 @@ export default {
           name: "OECE",
           content:
             "面向openEuler操作系统的高级服务、开发人员。其中服务人员需要了解openEuler内核原理及各种接口使用，能够通过跟踪调试代码定位分析问题；规划并看护运维工具，且能够设计服务流程，提升交付、运维效率。开发人员需要能够对软件架构做看护与重构，对于代码做review以及PR合入；洞察业界技术趋势识别关键技术并在社区做引入。",
-          detail: "敬请期待课程详情",
+          detail: "敬请期待详情",
         },
       ],
     };
@@ -180,7 +180,7 @@ export default {
           .item-detail {
             display: flex;
             align-items: center;
-            font-size: 14px;
+            font-size: 16px;
             color: #ffffff;
             line-height: 32px;
             font-weight: 400;

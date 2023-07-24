@@ -36,19 +36,19 @@ export default {
           name: "2.考场查询",
           src: require("../../assets/images/process03.svg"),
         },
-        {
-          id: "forth",
-          name: "3.预约考试",
-          src: require("../../assets/images/process04.svg"),
-        },
+        // {
+        //   id: "forth",
+        //   name: "3.预约考试",
+        //   src: require("../../assets/images/process04.svg"),
+        // },
         {
           id: "fifth",
-          name: "4.参加考试",
+          name: "3.参加考试",
           src: require("../../assets/images/process05.svg"),
         },
         {
           id: "sixth",
-          name: "5.证书查询",
+          name: "4.证书查询",
           src: require("../../assets/images/process06.svg"),
         },
       ],
@@ -84,7 +84,7 @@ export default {
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 214px;
+      width: 264px;
       height: 164px;
       border: 1px solid #f2f6fc;
       background-color: #ffffff;
