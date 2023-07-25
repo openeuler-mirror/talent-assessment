@@ -8,6 +8,7 @@
     </div>
     <div class="detail-content-box">
       <div class="detailTitle">{{ titleName }}</div>
+      <div class="secondaryTitle">{{ secondaryTitle }}</div>
       <div class="page-main-divider"></div>
       <!-- 课程介绍 -->
       <div class="detailIntroduce">
@@ -68,15 +69,16 @@ export default {
       firstNavigation: "人才评定",
       navigationUrl: require("../../../src/assets/images/mobile/menu_right.svg"),
       secondNavigation: "认证等级",
-      titleName: "初级 OECA课程",
+      titleName: "OECA课程",
       courseIntro: "课程介绍",
+      secondaryTitle: "openEuler Certified Associate",
       courseDetailIntro:
         "社区根据openEuler技术发展路线与市场需求，规划设计了《openEuler OECA认证课程》，本课程以内部原理、实践实战为主，理论与实践相结合。课程内容涵盖操作系统安装升级、系统服务配置和管理、ssh管理及安全、用户和群组管理等课程内容。",
       courseLink: "课程链接",
       // courseLinkContent:
       //   "https://training-assessment.osinfra.cn/portal/1519850993951571970/more?cardId=s9x1ddqboi&activeIndex=0&pageDetailsUuid=626b3f291baa0d665aa49141&sxz-lang=zh_CN",
       courseLinkContent:
-        "https://partner.huawei.com/university/webui_portal/#/zone?customizedZoneId=VxkRMyFZWD7vX1uyOfwZFpBugag",
+        "https://hiss.shixizhi.huawei.com/center/privateCenter.htm?schoolId=1643780836745113602&type=studyCenter_LearningTask&sxz-lang=zh_CN&mapDetail=3&mapDetailId=1675057597212368897",
       courseOutline: "课程大纲",
       outlineArr: [
         {
@@ -206,6 +208,13 @@ export default {
       line-height: 1.5rem;
       //font-weight: 200;
       font-weight: 400;
+    }
+    .secondaryTitle {
+      font-size: 1rem;
+      font-weight: 500;
+      margin-bottom: 1.125rem;
+      margin-top: -0.8rem;
+      color: rgba(0, 0, 0, 0.5);
     }
     .page-main-divider {
       background: #e5e5e5;
