@@ -45,22 +45,22 @@ export default {
           name: "2.考场查询",
           src: require("../../assets/images/process03.svg"),
         },
-        {
-          id: "forth",
-          idText: "forth-text",
-          name: "3.预约考试",
-          src: require("../../assets/images/process04.svg"),
-        },
+        // {
+        //   id: "forth",
+        //   idText: "forth-text",
+        //   name: "3.预约考试",
+        //   src: require("../../assets/images/process04.svg"),
+        // },
         {
           id: "fifth",
           idText: "fifth-text",
-          name: "4.参加考试",
+          name: "3.参加考试",
           src: require("../../assets/images/process05.svg"),
         },
         {
           id: "sixth",
           idText: "sixth-text",
-          name: "5.证书查询",
+          name: "4.证书查询",
           src: require("../../assets/images/process06.svg"),
         },
       ],
@@ -103,10 +103,10 @@ export default {
       .rz-process-top {
         background: #ffffff;
         box-shadow: 0 0.0625rem 0.3125rem 0 rgba(45, 47, 51, 0.1);
-        width: 6.3125rem;
+        width: 9.3125rem;
         height: 4.875rem;
         img {
-          width: 3.5rem;
+          width: 6.5rem;
           height: 2.4375rem;
           padding: 1.1875rem 1.4375rem 1.25rem 1.375rem;
         }

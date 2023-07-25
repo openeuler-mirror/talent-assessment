@@ -26,7 +26,7 @@ export default {
       firstText:
         "随着openEuler及其发行版本在各个行业使用量逐年增多，相关人才的评定诉求愈发强烈，故由openEuler社区联合伙伴共同打造openEuler人才评定体系。",
       secondText:
-        "openEuler人才评定体系旨在帮助企业快速培养专业openEuler生态使用人才；推动相关从业人员高效获得权威资质评定；促使技术爱好者踊跃融入社区技术生态建设。",
+        "openEuler人才评定体系旨在帮助企业快速培养专业openEuler生态人才；推动相关从业人员高效获得权威资质评定；促使技术爱好者踊跃融入社区技术生态建设。",
     };
   },
 };
