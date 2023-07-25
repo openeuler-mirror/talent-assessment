@@ -10,6 +10,7 @@
         class="item"
         :class="[item.id, index != 0 ? 'item-top-margin' : '']"
         :id="getId(index)"
+        @click="item.id !== 'third' ? itemClickOpt(item) : ''"
       >
         <!-- 上方区域 -->
         <div class="item-top">
@@ -29,7 +30,7 @@
           </div>
 
           <div class="item-top-right">
-            <div class="item-detail" v-if="index === 0">
+            <div class="item-detail" v-if="index !== 2">
               <span> {{ item.detail }} </span>
               <img
                 src="../../assets/images/arrow-right.png"
@@ -75,7 +76,7 @@ export default {
           name: "OECP",
           content:
             "面向openEuler操作系统的中级服务人员、开发人员。对于服务人员需要能够通过日志、配置做问题诊断和处理且运维过程中可以熟练使用shell/python/perl命令及脚本编写。对于开发人员需要熟悉主流大型软件编写语言（C/C++/JAVA/python/go等），掌握linux内核模块开发技能，参与到openEuler社区各开源项目代码提交、问题交流。",
-          detail: "敬请期待详情",
+          detail: "查看详情",
         },
         {
           id: "third",
@@ -88,20 +89,13 @@ export default {
       ],
     };
   },
-  mounted() {
-    let _this = this;
-    let cardNumber = document.getElementById("cardNumber0");
-    cardNumber.style.cursor = "pointer";
-    cardNumber.addEventListener("click", function () {
-      _this.itemClickOpt();
-    });
-  },
+  mounted() {},
   methods: {
     getId(pIndex) {
       return "cardNumber" + pIndex;
     },
-    itemClickOpt() {
-      this.$router.push({ path: "/levelDetail" });
+    itemClickOpt(row) {
+      this.$router.push({ path: "/levelDetail", query: { type: row.id } });
     },
   },
 };
