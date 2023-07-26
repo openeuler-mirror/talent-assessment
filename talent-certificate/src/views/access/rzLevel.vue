@@ -60,7 +60,7 @@ export default {
       name: "我是等级认证界面",
       levelArr: [
         {
-          id: "first",
+          id: "OECA",
           level: "初级",
           name: "OECA",
           content:
@@ -68,7 +68,7 @@ export default {
           detail: "查看详情",
         },
         {
-          id: "second",
+          id: "OECP",
           level: "中级",
           name: "OECP",
           content:
@@ -76,7 +76,7 @@ export default {
           detail: "查看详情",
         },
         {
-          id: "third",
+          id: "OECE",
           level: "高级",
           name: "OECE",
           content:
