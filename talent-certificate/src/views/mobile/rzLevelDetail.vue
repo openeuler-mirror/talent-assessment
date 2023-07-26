@@ -96,7 +96,7 @@ export default {
     };
   },
   created() {
-    if (this.$route.query.type === "first") {
+    if (this.$route.query.type === "OECA") {
       this.courseContent = [
         {
           titleName: "OECA课程",
