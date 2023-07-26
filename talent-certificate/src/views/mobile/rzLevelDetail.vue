@@ -25,14 +25,14 @@
         <!-- <div class="content"> {{ courseLinkContent }} </div> -->
         <div>
           <a
-            :style="{
-              'font-size': cont.outlineArr.length > 0 ? '0.75rem' : '0.85rem',
-              'padding-bottom': cont.outlineArr.length > 0 ? '0' : '1.5rem',
-            }"
+            v-if="cont.outlineArr.length > 0"
             class="content"
             :href="cont.courseLinkContent"
             target="_blank"
           >
+            {{ cont.courseLinkContent }}
+          </a>
+          <a v-else class="content linkContent">
             {{ cont.courseLinkContent }}
           </a>
         </div>
@@ -207,13 +207,13 @@ export default {
             },
             {
               serialNum: "02",
-              name: "迁移移植适配",
+              name: "迁移适配",
               imgSrc: require("../../assets/images/time.png"),
               timeNum: "1.0",
             },
             {
               serialNum: "03",
-              name: "迁移工具培训",
+              name: "迁移工具",
               imgSrc: require("../../assets/images/time.png"),
               timeNum: "1.0",
             },
@@ -336,6 +336,10 @@ export default {
         text-decoration: none;
         outline: none;
         -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+      }
+      .linkContent {
+        font-size: 0.85rem;
+        padding-bottom: 1.5rem;
       }
     }
     .detailOutline {
