@@ -7,7 +7,7 @@
         class="item"
         :class="item.id"
         :id="getId(index)"
-        @click="item.id !== 'third' ? itemClickOpt(item) : ''"
+        @click="item.id !== 'OECE' ? itemClickOpt(item) : ''"
       >
         <!-- 上方区域 -->
         <div class="item-top">
