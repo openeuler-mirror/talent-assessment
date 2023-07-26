@@ -5,14 +5,18 @@
         <img src="../../assets/images/logo.png" alt="" />
       </div>
     </div>
-    <div class="detailContent">
-      <div class="detailTitle">{{ titleName }}</div>
-      <div class="secondaryTitle">{{ secondaryTitle }}</div>
+    <div
+      class="detailContent"
+      v-for="(cont, index) in courseContent"
+      :key="index"
+    >
+      <div class="detailTitle">{{ cont.titleName }}</div>
+      <div class="secondaryTitle">{{ cont.secondaryTitle }}</div>
       <div class="page-main-divider"></div>
       <!-- 课程介绍 -->
       <div class="detailIntroduce">
         <div class="title">{{ courseIntro }}</div>
-        <div class="content">{{ courseDetailIntro }}</div>
+        <div class="content">{{ cont.courseDetailIntro }}</div>
       </div>
       <!-- 课程链接 -->
       <div class="detailLink">
@@ -20,21 +24,23 @@
         <!-- <div class="content"> {{ courseLinkContent }} </div> -->
         <div>
           <a
-            :style="{ 'font-size': outlineArr.length > 0 ? '14px' : '18px' }"
+            :style="{
+              'font-size': cont.outlineArr.length > 0 ? '14px' : '18px',
+            }"
             class="content"
-            :href="courseLinkContent"
+            :href="cont.courseLinkContent"
             target="_blank"
           >
-            {{ courseLinkContent }}
+            {{ cont.courseLinkContent }}
           </a>
         </div>
       </div>
       <!-- 课程大纲 -->
-      <div class="detailOutline" v-if="outlineArr.length">
+      <div class="detailOutline" v-if="cont.outlineArr.length">
         <div class="title">{{ courseOutline }}</div>
         <div class="content">
           <div
-            v-for="(item, index) in outlineArr"
+            v-for="(item, index) in cont.outlineArr"
             :key="index"
             class="item-box"
           >
@@ -70,105 +76,151 @@ export default {
   },
   data() {
     return {
-      titleName: "",
-      secondaryTitle: "",
       courseIntro: "课程介绍",
-      courseDetailIntro: "",
       courseLink: "课程链接",
-      courseLinkContent: "",
       courseOutline: "课程大纲",
-      outlineArr: [],
+      courseContent: [
+        {
+          titleName: "",
+          secondaryTitle: "",
+          courseDetailIntro: "",
+          courseLinkContent: "",
+          outlineArr: [],
+        },
+      ],
     };
   },
   created() {
-    if (this.$route.query.type === "first") {
-      this.titleName = "OECA课程";
-      this.secondaryTitle = "openEuler Certified Associate";
-      this.courseDetailIntro =
-        "社区根据openEuler技术发展路线与市场需求，规划设计了《openEuler OECA认证课程》，本课程以内部原理、实践实战为主，理论与实践相结合。课程内容涵盖操作系统安装升级、系统服务配置和管理、ssh管理及安全、用户和群组管理等课程内容。";
-      this.courseLinkContent =
-        "https://hiss.shixizhi.huawei.com/center/privateCenter.htm?schoolId=1643780836745113602&type=studyCenter_LearningTask&sxz-lang=zh_CN&mapDetail=3&mapDetailId=1675057597212368897";
-      this.outlineArr = [
+    if (this.$route.query.type === "OECA") {
+      this.courseContent = [
         {
-          serialNum: "01",
-          name: "系统安装及自动安装",
-          imgSrc: require("../../assets/images/time.png"),
-          timeNum: "1.5小时",
-        },
-        {
-          serialNum: "02",
-          name: "物理存储管理及逻辑卷管理",
-          imgSrc: require("../../assets/images/time.png"),
-          timeNum: "2小时",
-        },
-        {
-          serialNum: "03",
-          name: "系统服务的配置和管理",
-          imgSrc: require("../../assets/images/time.png"),
-          timeNum: "2小时",
-        },
-        {
-          serialNum: "04",
-          name: "网络连接和防火墙",
-          imgSrc: require("../../assets/images/time.png"),
-          timeNum: "2小时",
-        },
-        {
-          serialNum: "05",
-          name: "进程及进程管理",
-          imgSrc: require("../../assets/images/time.png"),
-          timeNum: "1.5小时",
-        },
-        {
-          serialNum: "06",
-          name: "文件和文件系统",
-          imgSrc: require("../../assets/images/time.png"),
-          timeNum: "1小时",
-        },
-        {
-          serialNum: "07",
-          name: "用户和群组",
-          imgSrc: require("../../assets/images/time.png"),
-          timeNum: "1小时",
-        },
-        {
-          serialNum: "08",
-          name: "系统日志管理",
-          imgSrc: require("../../assets/images/time.png"),
-          timeNum: "1小时",
-        },
-        {
-          serialNum: "09",
-          name: "常规故障定位定界",
-          imgSrc: require("../../assets/images/time.png"),
-          timeNum: "2.5小时",
-        },
-        {
-          serialNum: "10",
-          name: "ssh管理及安全",
-          imgSrc: require("../../assets/images/time.png"),
-          timeNum: "2小时",
-        },
-        {
-          serialNum: "11",
-          name: "shell脚本",
-          imgSrc: require("../../assets/images/time.png"),
-          timeNum: "2小时",
-        },
-        {
-          serialNum: "12",
-          name: "系统启动流程",
-          imgSrc: require("../../assets/images/time.png"),
-          timeNum: "1.5小时",
+          titleName: "OECA课程",
+          secondaryTitle: "openEuler Certified Associate",
+          courseDetailIntro:
+            "社区根据openEuler技术发展路线与市场需求，规划设计了《openEuler OECA认证课程》，本课程以内部原理、实践实战为主，理论与实践相结合。课程内容涵盖操作系统安装升级、系统服务配置和管理、ssh管理及安全、用户和群组管理等课程内容。",
+          courseLinkContent:
+            "https://hiss.shixizhi.huawei.com/center/privateCenter.htm?schoolId=1643780836745113602&type=studyCenter_LearningTask&sxz-lang=zh_CN&mapDetail=3&mapDetailId=1675057597212368897",
+          outlineArr: [
+            {
+              serialNum: "01",
+              name: "系统安装及自动安装",
+              imgSrc: require("../../assets/images/time.png"),
+              timeNum: "1.5小时",
+            },
+            {
+              serialNum: "02",
+              name: "物理存储管理及逻辑卷管理",
+              imgSrc: require("../../assets/images/time.png"),
+              timeNum: "2小时",
+            },
+            {
+              serialNum: "03",
+              name: "系统服务的配置和管理",
+              imgSrc: require("../../assets/images/time.png"),
+              timeNum: "2小时",
+            },
+            {
+              serialNum: "04",
+              name: "网络连接和防火墙",
+              imgSrc: require("../../assets/images/time.png"),
+              timeNum: "2小时",
+            },
+            {
+              serialNum: "05",
+              name: "进程及进程管理",
+              imgSrc: require("../../assets/images/time.png"),
+              timeNum: "1.5小时",
+            },
+            {
+              serialNum: "06",
+              name: "文件和文件系统",
+              imgSrc: require("../../assets/images/time.png"),
+              timeNum: "1小时",
+            },
+            {
+              serialNum: "07",
+              name: "用户和群组",
+              imgSrc: require("../../assets/images/time.png"),
+              timeNum: "1小时",
+            },
+            {
+              serialNum: "08",
+              name: "系统日志管理",
+              imgSrc: require("../../assets/images/time.png"),
+              timeNum: "1小时",
+            },
+            {
+              serialNum: "09",
+              name: "常规故障定位定界",
+              imgSrc: require("../../assets/images/time.png"),
+              timeNum: "2.5小时",
+            },
+            {
+              serialNum: "10",
+              name: "ssh管理及安全",
+              imgSrc: require("../../assets/images/time.png"),
+              timeNum: "2小时",
+            },
+            {
+              serialNum: "11",
+              name: "shell脚本",
+              imgSrc: require("../../assets/images/time.png"),
+              timeNum: "2小时",
+            },
+            {
+              serialNum: "12",
+              name: "系统启动流程",
+              imgSrc: require("../../assets/images/time.png"),
+              timeNum: "1.5小时",
+            },
+          ],
         },
       ];
     } else {
-      this.titleName = "OECP课程";
-      this.secondaryTitle = "openEuler Certified Professional";
-      this.courseDetailIntro =
-        "本课程定位于培养具备openEuler操作系统管理及应用的高级工程师。通过本课程的学习，将掌握openEuler操作系统常用服务配置、安全管理、故障处理工具，以及虚拟化、容器化基础知识等。课程中也包含众多实践操作，边学边练，理论与实践相互印证，提升知识掌握深度。";
-      this.courseLinkContent = "课程正在开发中，敬请期待";
-      this.outlineArr = [];
+      this.courseContent = [
+        {
+          titleName: "OECP课程",
+          secondaryTitle: "openEuler Certified Professional",
+          courseDetailIntro:
+            "本课程定位于培养具备openEuler操作系统管理及应用的高级工程师。通过本课程的学习，将掌握openEuler操作系统常用服务配置、安全管理、故障处理工具，以及虚拟化、容器化基础知识等。课程中也包含众多实践操作，边学边练，理论与实践相互印证，提升知识掌握深度。",
+          courseLinkContent: "课程正在开发中，敬请期待",
+          outlineArr: [],
+        },
+        {
+          titleName: "OECP-M课程",
+          secondaryTitle: "openEuler Certified Professional - Migrate",
+          courseDetailIntro:
+            "本课程定位于培养具备openEuler迁移实践操作能力的高级工程师。通过本课程的学习，将了解openEuler迁移的背景、流程、方案、工具等内容。结合迁移实践练习及众多迁移案例剖析，能够更好解决迁移现场遇到的问题。",
+          courseLinkContent:
+            "https://c0605e03bb6b40dca9cd34ab5b3fb1f8.shixizhi.huawei.com/center/privateCenter.htm?schoolId=1643780836745113602&type=studyCenter_LearningTask&sxz-lang=zh_CN&mapDetail=3&mapDetailId=1659085047015194625",
+          outlineArr: [
+            {
+              serialNum: "01",
+              name: "迁移解决方案介绍",
+              imgSrc: require("../../assets/images/time.png"),
+              timeNum: "1.0小时",
+            },
+            {
+              serialNum: "02",
+              name: "迁移移植适配",
+              imgSrc: require("../../assets/images/time.png"),
+              timeNum: "1.0小时",
+            },
+            {
+              serialNum: "03",
+              name: "迁移工具培训",
+              imgSrc: require("../../assets/images/time.png"),
+              timeNum: "1.0小时",
+            },
+            {
+              serialNum: "04",
+              name: "迁移常见案例",
+              imgSrc: require("../../assets/images/time.png"),
+              timeNum: "1.0小时",
+            },
+          ],
+        },
+      ];
     }
   },
   methods: {
