@@ -24,13 +24,14 @@
         <!-- <div class="content"> {{ courseLinkContent }} </div> -->
         <div>
           <a
-            :style="{
-              'font-size': cont.outlineArr.length > 0 ? '14px' : '18px',
-            }"
+            v-if="cont.outlineArr.length > 0"
             class="content"
             :href="cont.courseLinkContent"
             target="_blank"
           >
+            {{ cont.courseLinkContent }}
+          </a>
+          <a v-else class="content" style="font-size: 18px">
             {{ cont.courseLinkContent }}
           </a>
         </div>
@@ -202,13 +203,13 @@ export default {
             },
             {
               serialNum: "02",
-              name: "迁移移植适配",
+              name: "迁移适配",
               imgSrc: require("../../assets/images/time.png"),
               timeNum: "1.0小时",
             },
             {
               serialNum: "03",
-              name: "迁移工具培训",
+              name: "迁移工具",
               imgSrc: require("../../assets/images/time.png"),
               timeNum: "1.0小时",
             },

@@ -33,7 +33,7 @@ export default {
         },
         {
           id: "third",
-          name: "2.考场查询",
+          name: "2.课程学习",
           src: require("../../assets/images/process03.svg"),
         },
         // {
