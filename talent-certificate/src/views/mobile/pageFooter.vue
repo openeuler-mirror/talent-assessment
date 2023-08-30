@@ -38,7 +38,7 @@
             服务状态
           </a>
         </div>
-        <div class="copyRight">版权所有 © 2022 openEuler 保留一切权利</div>
+        <div class="copyRight">版权所有 © 2023 openEuler 保留一切权利</div>
       </div>
       <div class="footer-logo">
         <img
