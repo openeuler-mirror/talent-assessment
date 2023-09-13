@@ -41,7 +41,7 @@ export default {
   data() {
     return {
       backgroundText: "CERTIFICATION",
-      mainTitle: "人才评定",
+      mainTitle: "人才能力评定",
     };
   },
   methods: {
