@@ -6,7 +6,12 @@
       :key="item.id"
       @click="itemClicked(item.id)"
     >
-      <img class="combine-img" :src="item.src" alt="partnerImg" />
+      <img
+        class="combine-img"
+        :class="'image' + item.id"
+        :src="item.src"
+        alt="partnerImg"
+      />
     </div>
   </div>
 </template>
@@ -30,6 +35,8 @@ export default {
         { id: "06", src: require("../../assets/images/tongxintuanjian.png") },
         { id: "07", src: require("../../assets/images/jiangsurunhe.png") },
         { id: "08", src: require("../../assets/images/dongruanjituan.png") },
+        { id: "09", src: require("../../assets/images/kepurui.png") },
+        { id: "10", src: require("../../assets/images/hunanoulalogo.png") },
       ],
     };
   },
@@ -61,7 +68,7 @@ export default {
 .rzCombine {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: left;
   margin-bottom: 40px;
   .combine-container {
     display: flex;
@@ -79,6 +86,12 @@ export default {
       align-items: center;
       width: 100%;
       height: 100%;
+    }
+    .image09,
+    .image10 {
+      width: 90%;
+      height: 67%;
+      padding: 20px;
     }
   }
 }
