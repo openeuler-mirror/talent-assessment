@@ -11,7 +11,7 @@
       <div class="page-main-list">
         <div class="list-title">合作委托声明</div>
         <div class="list-content">
-          为方便对参加openEuler社区人才评定学员进行评定考试，openEuler社区优选业界资深操作系统评定考试机构。openEuler社区已经对评定考试的合作伙伴做相关授权。
+          为方便对参加openEuler开源社区人才能力评定的学员进行能力评定考试,openEuler开源社区优选了多家业界资深的操作系统能力评定考试机构，并为以下各合作伙伴已做相关授权。
         </div>
       </div>
       <div class="page-main-list">
@@ -79,7 +79,7 @@ export default {
           "_blank"
         );
       } else if (pId === "03") {
-        window.open("https://www.chinasofti.com/", "_blank");
+        window.open("https://openlab.chinasoftinc.com/", "_blank");
       } else if (pId === "04") {
         window.open("https://edu.uniontech.com/openEuler", "_blank");
       }
