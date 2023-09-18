@@ -13,7 +13,7 @@
         :key="item.id"
       >
         <div style="cursor: pointer" @click="imgClick(item.id)">
-          <img :src="item.src" alt="partnerImg" />
+          <img :class="'image' + item.id" :src="item.src" alt="partnerImg" />
         </div>
       </div>
     </div>
@@ -41,7 +41,8 @@ export default {
         { id: "06", src: require("../../assets/images/tongxintuanjian.png") },
         { id: "07", src: require("../../assets/images/jiangsurunhe.png") },
         { id: "08", src: require("../../assets/images/dongruanjituan.png") },
-        // { id: "08", src: require("../../assets/images/company.svg") },
+        { id: "09", src: require("../../assets/images/kepurui.png") },
+        { id: "10", src: require("../../assets/images/hunanoulalogo.png") },
       ],
     };
   },
@@ -114,6 +115,11 @@ export default {
         width: 100%;
         height: 100%;
         border: 0;
+      }
+      .image09,
+      .image10 {
+        padding: 15px;
+        width: 83%;
       }
     }
   }
