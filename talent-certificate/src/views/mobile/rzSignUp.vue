@@ -61,12 +61,12 @@ export default {
   },
   data() {
     return {
-      firstMenu: "人才评定",
+      firstMenu: "人才能力评定",
       secondMenu: "我要报名",
       containerTitle: "我要报名",
       containerName: "合作委托声明",
       containerContent:
-        "为方便对参加openEuler社区人才评定学员进行评定考试，openEuler社区优选业界资深操作系统评定考试机构。openEuler社区已经对评定考试的合作伙伴做相关授权。",
+        "为方便对参加openEuler开源社区人才能力评定的学员进行能力评定考试,openEuler开源社区优选了多家业界资深的操作系统能力评定考试机构，并为以下各合作伙伴已做相关授权。",
       containerSecondName: "报名入口",
       containerSecondContent:
         "当前已经授权如下合作伙伴，选择任一合作伙伴即可跳转至评定考试报名页面：",
@@ -94,7 +94,7 @@ export default {
           "https://e.huawei.com/cn/talent/#/cert/product-details?certifiedProductId=383&amp%3BauthenticationLevel=CTYPE_CARE_HCIA&amp%3BtechnicalField=PSC&amp%3Bversion=1.0"
         );
       } else if (item === "03") {
-        window.open("https://www.chinasofti.com/");
+        window.open("https://openlab.chinasoftinc.com/");
       } else if (item === "04") {
         window.open("https://edu.uniontech.com/openEuler", "_blank");
       }
