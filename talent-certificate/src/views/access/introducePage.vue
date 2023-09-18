@@ -9,7 +9,7 @@
       <div class="access-header-container">
         <div class="banner-operate-left">
           <img src="../../assets/images/bannerText.svg" alt="" />
-          <div class="banner-operate-text">人才评定</div>
+          <div class="banner-operate-text">人才能力评定</div>
           <div class="banner-operate-button">
             <div class="operate-item" @click="processClick">
               <div class="operate-item-text">
@@ -40,12 +40,12 @@
         <div class="part-container">
           <div class="part-container-text" style="margin-bottom: 15px">
             <span>
-              随着openEuler及其发行版本在各个行业使用量逐年增多，相关人才的评定诉求愈发强烈，故由openEuler社区联合伙伴共同打造openEuler人才评定体系。
+              随着openEuler及其发行版本在各个行业使用量逐年增多，相关人才的评定诉求愈发强烈，故由openEuler社区联合伙伴共同打造openEuler人才能力评定体系。
             </span>
           </div>
           <div class="part-container-text">
             <span>
-              openEuler人才评定体系旨在帮助企业快速培养专业openEuler生态人才；推动相关从业人员高效获得权威资质评定；促使技术爱好者踊跃融入社区技术生态建设。
+              openEuler人才能力评定体系旨在帮助企业快速培养专业openEuler生态人才；推动相关从业人员高效获得权威资质评定；促使技术爱好者踊跃融入社区技术生态建设。
             </span>
           </div>
         </div>
@@ -69,7 +69,7 @@
       <div class="access-system">
         <div class="part-title" style="margin-top: 70px; margin-bottom: 24px">
           <div class="part-title-size" style="margin-bottom: 16px">
-            人才评定合作伙伴
+            人才能力评定合作伙伴
           </div>
           <div style="font-size: 14px; color: #555555; font-weight: 400">
             合作伙伴招募详细内容可联系
