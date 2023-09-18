@@ -30,7 +30,7 @@ export default {
   name: "rzPartner",
   data() {
     return {
-      firstText: "人才评定合作伙伴",
+      firstText: "人才能力评定合作伙伴",
       secondText: "合作伙伴招募详细内容可联系oecxonline@openeuler.sh",
       partnerImg: [
         { id: "01", src: require("../../assets/images/mobile/rtdl.png") },
