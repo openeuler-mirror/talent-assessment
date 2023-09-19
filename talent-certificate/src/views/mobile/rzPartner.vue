@@ -64,6 +64,10 @@ export default {
         window.open("https://www.hoperun.com/", "_blank");
       } else if (item === "08") {
         window.open("https://www.neusoft.com/cn/", "_blank");
+      } else if (item === "09") {
+        window.open("http://www.china-esp.com/", "_blank");
+      } else if (item === "10") {
+        window.open("http://openeuler-hn.com/", "_blank");
       }
     },
   },
