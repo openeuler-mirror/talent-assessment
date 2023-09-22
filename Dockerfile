@@ -1,4 +1,4 @@
-FROM openeuler/openeuler:22.03-lts-sp2:latest
+FROM openeuler/openeuler:22.03-lts-sp2
 
 MAINTAINER isoftstone
 
