@@ -1,4 +1,4 @@
-FROM swr.cn-north-4.myhuaweicloud.com/opensourceway/infra-common/openeuler-22.03-lts-sp2:latest
+FROM openeuler/openeuler:22.03-lts-sp2:latest
 
 MAINTAINER isoftstone
 
