@@ -34,11 +34,13 @@ RUN rm -rf /usr/share/nginx/html/dist.zip
 #修改权限
 RUN chown -R nginx:nginx dist/
 RUN chmod 777 /run
-USER nginx
+
 
 #删除源码包
 WORKDIR /opt/
 RUN rm -rf talent-certificate/
+
+USER nginx
 
 #对外暴露的端口
 EXPOSE 8080
