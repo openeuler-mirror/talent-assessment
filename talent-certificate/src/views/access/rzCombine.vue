@@ -37,6 +37,7 @@ export default {
         { id: "08", src: require("../../assets/images/dongruanjituan.png") },
         { id: "09", src: require("../../assets/images/kepurui.png") },
         { id: "10", src: require("../../assets/images/hunanoulalogo.png") },
+        { id: "11", src: require("../../assets/images/QSTLogo.png") },
       ],
     };
   },
@@ -62,6 +63,8 @@ export default {
         window.open("http://www.china-esp.com/", "_blank");
       } else if (pId === "10") {
         window.open("http://openeuler-hn.com/", "_blank");
+      } else if (pId === "11") {
+        window.open("https://itshixun.com/", "_blank");
       }
     },
   },
@@ -92,7 +95,8 @@ export default {
       height: 100%;
     }
     .image09,
-    .image10 {
+    .image10,
+    .image11 {
       width: 90%;
       height: 67%;
       padding: 20px;
