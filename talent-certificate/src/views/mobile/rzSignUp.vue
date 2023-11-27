@@ -33,7 +33,11 @@
           >
             <img
               :class="
-                item.id === '04' || item.id === '05' ? 'img-tongxin' : 'img'
+                item.id === '04' || item.id === '05'
+                  ? 'img-tongxin'
+                  : item.id === '06'
+                  ? 'img-runhe'
+                  : 'img'
               "
               :src="item.src"
               alt="partnerImg"
@@ -78,6 +82,7 @@ export default {
         { id: "03", src: require("../../assets/images/mobile/zsoft.png") },
         { id: "04", src: require("../../assets/images/tongxinlogo.svg") },
         { id: "05", src: require("../../assets/images/hunanlogo.png") },
+        { id: "06", src: require("../../assets/images/runhelogo.png") },
       ],
     };
   },
@@ -102,6 +107,8 @@ export default {
         window.open("https://edu.uniontech.com/openEuler", "_blank");
       } else if (item === "05") {
         window.open("http://kaoshi.openeuler-hn.com/", "_blank");
+      } else if (item === "06") {
+        window.open("http://talent-ass.hoperun.com:49999", "_blank");
       }
     },
   },
@@ -210,6 +217,11 @@ export default {
           .img-tongxin {
             width: 7rem;
             height: 100%;
+            display: block;
+          }
+          .img-runhe {
+            width: 7rem;
+            height: 75%;
             display: block;
           }
         }
