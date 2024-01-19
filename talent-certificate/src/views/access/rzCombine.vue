@@ -105,8 +105,9 @@ export default {
 }
 @media only screen and (min-width: 724px) and (max-width: 1500px) {
   .rzCombine {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    // flex-wrap: wrap;
+    grid-template-columns: repeat(2, auto);
     justify-content: center;
     margin-bottom: 40px;
     max-width: 1034px;
@@ -126,6 +127,13 @@ export default {
         align-items: center;
         width: 100%;
         height: 100%;
+      }
+      .image09,
+      .image10,
+      .image11 {
+        width: 90%;
+        height: 67%;
+        padding: 20px;
       }
     }
   }
